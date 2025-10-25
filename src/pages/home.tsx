@@ -127,7 +127,7 @@ function App() {
               nossos tecidos elevam o conceito de vestir bem.
             </h2>
             <p className="text-[#62686c] max-w-2xl mx-auto leading-relaxed">
-              Uma seleção refinada de gravatas em seda pura, com diversos padrões e cores para harmonizar perfeitamente com seu terno.
+              Uma seleção refinada de tecidos com qualidade pura, com diversos padrões e cores para harmonizar perfeitamente com seu terno.
             </p>
           </div>
 
