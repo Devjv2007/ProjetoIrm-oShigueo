@@ -23,25 +23,29 @@ export default function Header({ }: HeaderProps) {
         "transition-[background-color,opacity] duration-200 ease-out"
       ].join(" ")}
     >
-      <div className="container mx-auto px-4 py-2">
+      <div className="container mx-auto px-3 py-2">
         <div className="flex items-center gap-4 relative">
           <div className="flex items-center gap-4">
             <div>
-              <h1 className="text-2xl font-serif text-gray-900">Ternos do Irmão Shigueo</h1>
+              <h1 className="text-2xl font-serif text-gray-700">Ternos do Irmão Shigueo</h1>
             </div>
           </div>
           <div className="flex-1" />
           <nav className="hidden md:flex items-center gap-6">
-            <a href="#sobre" className="hover:text-blue-700 transition-colors">Sobre</a>
-            <a href="#gravatas" className="hover:text-blue-700 transition-colors">Gravatas</a>
-            <a href="#tecidos" className="hover:text-blue-700 transition-colors">Tecidos</a>
+            <a href="#sobre" className="hover:text-gray-700 transition-colors font-serif">Sobre</a>
+            <a href="#ternos" className="hover:text-gray-700 transition-colors font-serif">Ternos</a>
+            <a href="#camisas" className="hover:text-gray-700 transition-colors font-serif">Camisas</a>
+            <a href="#gravatas" className="hover:text-gray-700 transition-colors font-serif">Gravatas</a>
+            <a href="#depoimentos" className="hover:text-gray-700 transition-colors font-serif">Depoimentos</a>
+            <a href="#contato" className="hover:text-gray-700 transition-colors font-serif">Contato</a>
+
           </nav>
           <div className="hidden md:flex">
         <a
             href={`https://api.whatsapp.com/send/?phone=5518981367870&text&type=phone_number&app_absent=0`}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-blue-900 hover:bg-blue-800 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+            className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
           >
             WhatsApp
         </a>
@@ -73,16 +77,19 @@ export default function Header({ }: HeaderProps) {
           <div
             id="mobile-menu"
             className={[
-              "fixed left-0 right-0 top-20 z-50 md:hidden",
+              "fixed left-0 right-0 top-12 z-50 md:hidden",
               "transform origin-top transition-[opacity,transform] duration-200 ease-out",
               open ? " translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"
             ].join(" ")}
           >
             <nav className="rounded-b-lg  bg-white shadow-lg">
               <ul className="flex flex-col">
-                <li><a onClick={() => setOpen(false)} href="#sobre" className="block px-4 py-3 hover:bg-slate-50">Sobre</a></li>
-                <li><a onClick={() => setOpen(false)} href="#gravatas" className="block px-4 py-3 hover:bg-slate-50">Gravatas</a></li>
-                <li><a onClick={() => setOpen(false)} href="#tecidos" className="block px-4 py-3 hover:bg-slate-50">Tecidos</a></li>
+                <li><a onClick={() => setOpen(false)} href="#sobre" className="block px-4 py-3 hover:bg-slate-50 font-serif">Sobre</a></li>
+                <li><a onClick={() => setOpen(false)} href="#ternos" className="block px-4 py-3 hover:bg-slate-50 font-serif">Ternos</a></li>
+                <li><a onClick={() => setOpen(false)} href="#camisas" className="block px-4 py-3 hover:bg-slate-50 font-serif">Camisas</a></li>
+                <li><a onClick={() => setOpen(false)} href="#gravatas" className="block px-4 py-3 hover:bg-slate-50 font-serif">Gravatas</a></li>
+                <li><a onClick={() => setOpen(false)} href="#depoimentos" className="block px-4 py-3 hover:bg-slate-50 font-serif">Depoimentos</a></li>
+                <li><a onClick={() => setOpen(false)} href="#contato" className="block px-4 py-3 hover:bg-slate-50 font-serif">Contato</a></li>
               </ul>
             </nav>
           </div>

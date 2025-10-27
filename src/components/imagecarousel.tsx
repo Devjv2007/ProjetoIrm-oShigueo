@@ -54,63 +54,48 @@ const ImageCarousel: React.FC = () => {
   }, [images.length]);
 
   const goToSlide = (index: number) => setCurrentSlide(index);
-  const nextSlide = () => setCurrentSlide((p) => (p + 1) % images.length);
-  const prevSlide = () => setCurrentSlide((p) => (p - 1 + images.length) % images.length);
 
   return (
-    <section className="relative w-full h-[90vh] lg:h-screen overflow-hidden">
-      {images.map((image, index) => {
-        const src = `${toBase(image.src)}?w=1920&q=92&auto=format&fit=crop`;
-        return (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
-            }`}
-            aria-hidden={index !== currentSlide}
-          >
-            <img
-              src={src}
-              srcSet={image.srcSet}
-              sizes="100vw"
-              alt={image.alt}
-              className="absolute inset-0 w-full h-full object-cover"
-              draggable={false}
-              loading={index === 0 ? 'eager' : 'lazy'}
-            />
+    <section className="relative w-full h-[70vh] md:h-[90vh] lg:h-screen overflow-hidden">
+  {images.map((image, index) => {
+    const src = `${toBase(image.src)}?w=1920&q=92&auto=format&fit=crop`;
+    const isActive = index === currentSlide;
+    return (
+      <div
+        key={index}
+        className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+          isActive ? 'opacity-100' : 'opacity-0'
+        }`}
+        aria-hidden={!isActive}
+      >
+        <img
+          src={src}
+          srcSet={image.srcSet}
+          sizes="100vw"
+          alt={image.alt}
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          draggable={false}
+          loading={index === 0 ? 'eager' : 'lazy'}
+        />
 
-            <div className="absolute inset-0 bg-black/40" />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-          </div>
-        );
-      })}
-
-      <div className="relative z-10 h-full">
-        <div className="max-w-7xl mx-auto px-6 h-full flex flex-col justify-center">
-          <h1 className="mt-6 text-4xl md:text-6xl font-serif text-white leading-tight max-w-3xl">
-            O segredo da elegância está no ajuste perfeito
-          </h1>
-          <p className="mt-4 text-white/80 max-w-xl">
-            Descubra o equilíbrio perfeito entre forma, função e elegância
-          </p>
-        </div>
+        {/* Overlays só em md+ para não aparecer “fundo” no mobile */}
+        <div className="hidden md:block absolute inset-0 bg-black/40" />
+        <div className="hidden md:block pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
       </div>
+    );
+  })}
 
-      <button
-        onClick={prevSlide}
-        aria-label="Anterior"
-        className="absolute left-4 top-1/2 -translate-y-1/2 grid place-items-center w-10 h-10 rounded-full bg-black/40 hover:bg-black/60 text-white z-10"
-      >
-        ‹
-      </button>
-      <button
-        onClick={nextSlide}
-        aria-label="Próximo"
-        className="absolute right-4 top-1/2 -translate-y-1/2 grid place-items-center w-10 h-10 rounded-full bg-black/40 hover:bg-black/60 text-white z-10"
-      >
-        ›
-      </button>
 
+      <div className="relative z-10 h-full translate-y-10 md:translate-y-0">
+      <div className="max-w-7xl mx-auto px-6 h-full flex flex-col justify-center">
+        <h1 className="mt-6 text-4xl md:text-6xl font-serif text-white leading-tight max-w-3xl">
+          O segredo da elegância 
+        </h1>
+        <p className="mt-4 text-white/80 max-w-xl">
+          Descubra o equilíbrio perfeito entre forma, função e elegância
+        </p>
+      </div>
+    </div>
       <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 flex gap-2">
         {images.map((_, i) => (
           <button
