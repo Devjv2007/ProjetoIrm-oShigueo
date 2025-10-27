@@ -35,13 +35,9 @@ function CardHover({
       <div className="p-5">
         <h3 className="font-serif text-center text-gray-700 mb-1.5 text-sm">{title}</h3>
       </div>
-      <div className="pointer-events-none absolute inset-0 bg-black/55 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+      <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
         <div className="absolute inset-x-0 bottom-0 p-4 text-white">
-          <p className="text-xs leading-relaxed">{desc}</p>
           <div className="mt-3 flex justify-center">
-            <span className="inline-flex items-center rounded-md bg-white/90 px-3 py-1.5 text-[11px] font-medium text-gray-900">
-              Ver detalhes
-            </span>
           </div>
         </div>
       </div>
