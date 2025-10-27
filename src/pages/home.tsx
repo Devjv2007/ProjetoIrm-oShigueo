@@ -17,7 +17,6 @@ function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 function CardHover({
   src,
   title,
-  desc,
 }: {
   src: string;
   title: string;
