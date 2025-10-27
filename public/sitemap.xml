@@ -6,31 +6,31 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ternosdoirmaoshigueo.com/sobre</loc>
+    <loc>https://ternosdoirmaoshigueo.com/home#sobre</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ternosdoirmaoshigueo.com/ternos</loc>
+    <loc>https://ternosdoirmaoshigueo.com/home#ternos</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ternosdoirmaoshigueo.com/camisas   </loc>
+    <loc>https://ternosdoirmaoshigueo.com/home#camisas   </loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ternosdoirmaoshigueo.com/gravatas</loc>
+    <loc>https://ternosdoirmaoshigueo.com/home#gravatas</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
    <url>
-    <loc>https://ternosdoirmaoshigueo.com/depoimentos</loc>
+    <loc>https://ternosdoirmaoshigueo.com/home#depoimentos</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url> <url>
-    <loc>https://ternosdoirmaoshigueo.com/contato</loc>
+    <loc>https://ternosdoirmaoshigueo.com/home#contato</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
